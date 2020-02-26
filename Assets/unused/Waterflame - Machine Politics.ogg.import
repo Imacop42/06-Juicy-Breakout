@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Waterflame - Machine Politics.ogg-b05a2aae5fe916e8e476b83eecf3032a.oggstr"
+
+[deps]
+
+source_file="res://Assets/unused/Waterflame - Machine Politics.ogg"
+dest_files=[ "res://.import/Waterflame - Machine Politics.ogg-b05a2aae5fe916e8e476b83eecf3032a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

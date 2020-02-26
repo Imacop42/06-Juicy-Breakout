@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/719950_-Sinking-Feeling-.ogg-b4e66a91adc05ca8c195cdd5b423795b.oggstr"
+
+[deps]
+
+source_file="res://Assets/719950_-Sinking-Feeling-.ogg"
+dest_files=[ "res://.import/719950_-Sinking-Feeling-.ogg-b4e66a91adc05ca8c195cdd5b423795b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

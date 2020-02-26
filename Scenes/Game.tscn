@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Paddle.gd" type="Script" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Scripts/Score.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Lives.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Starting.gd" type="Script" id=6]
+[ext_resource path="res://Assets/voodoo_cactus_underwater (1).jpg" type="Texture" id=7]
+[ext_resource path="res://Assets/719950_-Sinking-Feeling-.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Scenes/Soundtrack.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 72, 16 )
@@ -222,7 +225,28 @@ margin_bottom = 112.0
 align = 1
 valign = 1
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timer" type="Timer" parent="Starting"]
 wait_time = 10.0
+
+[node name="Background" type="Node2D" parent="."]
+show_behind_parent = true
+position = Vector2( -3.94855, -6.32368 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Background"]
+scale = Vector2( 0.509524, 0.400119 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Soundtrack" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 8 )
+script = ExtResource( 9 )
 [connection signal="timeout" from="Starting/Timer" to="Starting" method="_on_Timer_timeout"]
