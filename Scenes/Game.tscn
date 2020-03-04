@@ -32,9 +32,15 @@ margin_left = -72.0
 margin_top = -16.0
 margin_right = 72.0
 margin_bottom = 16.0
+color = Color( 0.027451, 0.462745, 0.145098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle"]
 shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="Paddle"]
 
 [node name="Wall" type="StaticBody2D" parent="."]
 
@@ -42,8 +48,10 @@ shape = SubResource( 1 )
 polygon = PoolVector2Array( 0, 632, 0, 0, 1024, 0, 1024, 632, 1064, 632, 1064, -40, -48, -40, -48, 632 )
 
 [node name="Tiles" type="Node2D" parent="."]
+modulate = Color( 0.74902, 0.8, 0.831373, 1 )
 
 [node name="Tile Row 1" type="Node2D" parent="Tiles"]
+modulate = Color( 0.145098, 0.403922, 0.823529, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 1" instance=ExtResource( 3 )]
 position = Vector2( 184, 296 )
@@ -76,6 +84,7 @@ position = Vector2( 760, 296 )
 position = Vector2( 832, 296 )
 
 [node name="Tile Row 2" type="Node2D" parent="Tiles"]
+modulate = Color( 0.364706, 0.752941, 1, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 2" instance=ExtResource( 3 )]
 position = Vector2( 184, 256 )
@@ -108,6 +117,7 @@ position = Vector2( 760, 256 )
 position = Vector2( 832, 256 )
 
 [node name="Tile Row 3" type="Node2D" parent="Tiles"]
+modulate = Color( 0.556863, 0.886275, 1, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 3" instance=ExtResource( 3 )]
 position = Vector2( 184, 216 )
@@ -140,6 +150,7 @@ position = Vector2( 760, 216 )
 position = Vector2( 832, 216 )
 
 [node name="Tile Row 4" type="Node2D" parent="Tiles"]
+modulate = Color( 0.494118, 0.866667, 0.905882, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 4" instance=ExtResource( 3 )]
 position = Vector2( 184, 176 )
@@ -172,6 +183,7 @@ position = Vector2( 760, 176 )
 position = Vector2( 832, 176 )
 
 [node name="Tile Row 5" type="Node2D" parent="Tiles"]
+modulate = Color( 0.12549, 0.960784, 1, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 5" instance=ExtResource( 3 )]
 position = Vector2( 184, 136 )
@@ -234,7 +246,7 @@ wait_time = 10.0
 
 [node name="Background" type="Node2D" parent="."]
 show_behind_parent = true
-position = Vector2( -3.94855, -6.32368 )
+position = Vector2( -5.49613, -6.32368 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -248,5 +260,6 @@ centered = false
 
 [node name="Soundtrack" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource( 8 )
+volume_db = -5.0
 script = ExtResource( 9 )
 [connection signal="timeout" from="Starting/Timer" to="Starting" method="_on_Timer_timeout"]

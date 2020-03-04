@@ -1,5 +1,12 @@
 extends KinematicBody2D
 
+
+var _target = position
+
+func _ready():
+	position.y = 650
+	$Tween.interpolate_property(self, "position", position, _target, 5.0,Tween.TRANS_BOUNCE, Tween.EASE_OUT)
+	$Tween.start()
 func _physics_process(delta):
 	var shape = $ColorRect.get_rect().size
 	var view = get_viewport().get_visible_rect().size

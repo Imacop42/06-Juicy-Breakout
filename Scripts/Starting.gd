@@ -1,6 +1,6 @@
 extends Label
 
-export var countdown = 5
+export var countdown = 8
 onready var Timer = $Timer
 onready var Game = get_node("/root/Game")
 onready var Paddle = get_node("/root/Game/Paddle")
